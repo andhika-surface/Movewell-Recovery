@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <link rel="manifest" href="manifest.json">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="MoveWell Jakarta — premium bodywork & recovery studio. Hands-on bodywork and guided mobility for better movement and faster recovery." />
   <meta name="keywords" content="movewell jakarta, recovery studio, bodywork jakarta, massage, physiotherapy, sports recovery, wellness" />
   <meta name="author" content="MoveWell Indonesia" />
-  <link rel="canonical" href="https://movewellindonesia.com/" />
+  <link rel="canonical" href="https://andhika-surface.github.io/Movewell-Recovery/" />
   <title>MoveWell Jakarta — Premium Recovery Studio</title>
+  <link rel="manifest" href="manifest.json">
 
-  <!-- ✅ Google Search Console verification -->
+  <!-- ✅ Google Search Console -->
   <meta name="google-site-verification" content="fXZo_TOqinCZobDaaWBRXpc_Kb8xA_AxMJIRdl97XOI" />
 
-  <!-- ✅ Google Analytics (gtag.js) -->
+  <!-- ✅ Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFPR42J48S"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,29 +22,50 @@
     gtag('config', 'G-HFPR42J48S');
   </script>
 
-  <!-- ✅ Open Graph / Social meta -->
+  <!-- ✅ Open Graph -->
   <meta property="og:title" content="MoveWell Jakarta — Premium Bodywork & Recovery" />
   <meta property="og:description" content="Experience modern wellness meets high-performance recovery. Book your session via WhatsApp today!" />
-  <meta property="og:image" content="https://movewellindonesia.com/og-cover.jpg" />
-  <meta property="og:url" content="https://movewellindonesia.com" />
+  <meta property="og:image" content="https://andhika-surface.github.io/Movewell-Recovery/og-cover.jpg" />
+  <meta property="og:url" content="https://andhika-surface.github.io/Movewell-Recovery/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="MoveWell Indonesia" />
 
-  <!-- ✅ Twitter meta -->
+  <!-- ✅ Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MoveWell Jakarta — Premium Recovery Studio" />
   <meta name="twitter:description" content="Restore, recover, and move better with hands-on bodywork and guided mobility at MoveWell Jakarta." />
-  <meta name="twitter:image" content="https://movewellindonesia.com/og-cover.jpg" />
+  <meta name="twitter:image" content="https://andhika-surface.github.io/Movewell-Recovery/og-cover.jpg" />
 
+  <!-- ✅ LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MoveWell Jakarta",
+    "image": "https://andhika-surface.github.io/Movewell-Recovery/og-cover.jpg",
+    "url": "https://andhika-surface.github.io/Movewell-Recovery/",
+    "telephone": "+628111728128",
+    "priceRange": "IDR 175K - 485K",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jakarta",
+      "addressCountry": "ID"
+    }
+  }
+  </script>
+
+  <!-- ✅ Fonts & CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Jost:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="https://movewellindonesia.com/favicon.png" />
+  <link rel="icon" href="https://andhika-surface.github.io/Movewell-Recovery/favicon.png" />
 </head>
 
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
@@ -53,11 +74,11 @@
 
     <nav class="nav" id="main-nav" aria-label="Primary">
       <ul class="nav-list">
-        <li><a href="index.html" class="nav-link" data-nav="home"><span data-lang="en">Home</span><span data-lang="id">Beranda</span></a></li>
-        <li><a href="services.html" class="nav-link" data-nav="services"><span data-lang="en">Services</span><span data-lang="id">Layanan</span></a></li>
-        <li><a href="about.html" class="nav-link" data-nav="about"><span data-lang="en">About</span><span data-lang="id">Tentang</span></a></li>
-        <li><a href="promo.html" class="nav-link" data-nav="promo"><span data-lang="en">Promo</span><span data-lang="id">Promo</span></a></li>
-        <li><a href="contact.html" class="nav-link" data-nav="contact"><span data-lang="en">Contact</span><span data-lang="id">Kontak</span></a></li>
+        <li><a href="index.html" class="nav-link" aria-current="page"><span data-lang="en">Home</span><span data-lang="id">Beranda</span></a></li>
+        <li><a href="services.html" class="nav-link"><span data-lang="en">Services</span><span data-lang="id">Layanan</span></a></li>
+        <li><a href="about.html" class="nav-link"><span data-lang="en">About</span><span data-lang="id">Tentang</span></a></li>
+        <li><a href="promo.html" class="nav-link"><span data-lang="en">Promo</span><span data-lang="id">Promo</span></a></li>
+        <li><a href="contact.html" class="nav-link"><span data-lang="en">Contact</span><span data-lang="id">Kontak</span></a></li>
       </ul>
     </nav>
 
@@ -66,29 +87,10 @@
         <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
         <button class="lang-btn" data-lang="id" aria-pressed="false">ID</button>
       </div>
-
       <a class="cta cta-desktop" href="contact.html"><span data-lang="en">Book</span><span data-lang="id">Pesan</span></a>
-
       <button id="mobile-toggle" class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
         <span class="burger"></span>
       </button>
-    </div>
-  </div>
-
-  <div id="mobile-menu" class="mobile-menu" hidden>
-    <ul class="mobile-list">
-      <li><a href="index.html"><span data-lang="en">Home</span><span data-lang="id">Beranda</span></a></li>
-      <li><a href="services.html"><span data-lang="en">Services</span><span data-lang="id">Layanan</span></a></li>
-      <li><a href="about.html"><span data-lang="en">About</span><span data-lang="id">Tentang</span></a></li>
-      <li><a href="promo.html"><span data-lang="en">Promo</span><span data-lang="id">Promo</span></a></li>
-      <li><a href="contact.html"><span data-lang="en">Contact</span><span data-lang="id">Kontak</span></a></li>
-    </ul>
-    <div class="mobile-cta">
-      <a class="cta" href="contact.html"><span data-lang="en">Book Now</span><span data-lang="id">Pesan Sekarang</span></a>
-      <div class="mobile-lang">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="id">ID</button>
-      </div>
     </div>
   </div>
 </header>
@@ -106,53 +108,69 @@
         <span data-lang="id">Terapi langsung & mobilitas terpandu untuk membantu Anda pulih, bergerak lebih baik, dan kembali ke hal yang penting.</span>
       </p>
       <div class="hero-ctas">
-        <a class="cta btn-primary" href="contact.html"><span data-lang="en">Book Your Session</span><span data-lang="id">Pesan Sesi Anda</span></a>
+        <a class="cta btn-primary" href="https://wa.me/628111728128?text=Halo%20MoveWell%2C%20saya%20ingin%20memesan%20sesi%2060%20menit%20-%20Full%20Bodywork%20pada%20tanggal%20..."><span data-lang="en">Book via WhatsApp</span><span data-lang="id">Pesan via WhatsApp</span></a>
         <a class="btn-ghost" href="promo.html"><span data-lang="en">Opening Promo</span><span data-lang="id">Promo Pembukaan</span></a>
       </div>
     </div>
 
+    <!-- 🎨 Updated Stylish Service Cards -->
     <div class="hero-card glass">
-      <div class="services-row">
-        <div class="service"><div class="s-title">30 min</div><div class="s-desc"><span data-lang="en">Quick Reset</span><span data-lang="id">Reset Singkat</span></div><div class="s-price">IDR 175K</div></div>
-        <div class="service"><div class="s-title">60 min</div><div class="s-desc"><span data-lang="en">Full Bodywork</span><span data-lang="id">Bodywork Penuh</span></div><div class="s-price">IDR 325K</div></div>
-        <div class="service"><div class="s-title">90 min</div><div class="s-desc"><span data-lang="en">Extended Recovery</span><span data-lang="id">Pemulihan Panjang</span></div><div class="s-price">IDR 485K</div></div>
+      <div class="services-grid">
+        <div class="service-card">
+          <h4 class="service-duration">30 min</h4>
+          <p class="service-name"><span data-lang="en">Quick Reset</span><span data-lang="id">Reset Singkat</span></p>
+          <p class="service-price">IDR 175K</p>
+        </div>
+        <div class="service-card">
+          <h4 class="service-duration">60 min</h4>
+          <p class="service-name"><span data-lang="en">Full Bodywork</span><span data-lang="id">Bodywork Penuh</span></p>
+          <p class="service-price">IDR 325K</p>
+        </div>
+        <div class="service-card">
+          <h4 class="service-duration">90 min</h4>
+          <p class="service-name"><span data-lang="en">Extended Recovery</span><span data-lang="id">Pemulihan Panjang</span></p>
+          <p class="service-price">IDR 485K</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<main>
+<main id="main-content">
   <section class="section services-preview fade-in">
     <div class="container">
       <h2 class="section-title"><span data-lang="en">Our Services</span><span data-lang="id">Layanan Kami</span></h2>
       <div class="grid-3">
-        <article class="card elevated"><h3><span data-lang="en">30 min — Quick Reset</span><span data-lang="id">30 menit — Reset Singkat</span></h3><p class="muted"><span data-lang="en">Fast mobilisation & release</span><span data-lang="id">Mobilisasi cepat & rilis</span></p><p class="price">IDR 175K</p></article>
-        <article class="card elevated"><h3><span data-lang="en">60 min — Full Bodywork</span><span data-lang="id">60 menit — Bodywork Penuh</span></h3><p class="muted"><span data-lang="en">Deep release & stretch</span><span data-lang="id">Rilis mendalam & regangan</span></p><p class="price">IDR 325K</p></article>
-        <article class="card elevated"><h3><span data-lang="en">90 min — Extended Recovery</span><span data-lang="id">90 menit — Pemulihan Panjang</span></h3><p class="muted"><span data-lang="en">Comprehensive session</span><span data-lang="id">Sesi komprehensif</span></p><p class="price">IDR 485K</p></article>
+        <article class="card elevated"><h3>30 min — Quick Reset</h3><p class="muted">Fast mobilisation & release</p><p class="price">IDR 175K</p></article>
+        <article class="card elevated"><h3>60 min — Full Bodywork</h3><p class="muted">Deep release & stretch</p><p class="price">IDR 325K</p></article>
+        <article class="card elevated"><h3>90 min — Extended Recovery</h3><p class="muted">Comprehensive session</p><p class="price">IDR 485K</p></article>
       </div>
     </div>
   </section>
 
   <section class="section about-preview section--light fade-in">
     <div class="container grid-2">
-      <div class="col"><h2><span data-lang="en">Redefining Body Care</span><span data-lang="id">Mendefinisikan Ulang Perawatan Tubuh</span></h2><p class="lead"><span data-lang="en">We blend hands-on techniques with movement coaching to restore function and reduce pain.</span><span data-lang="id">Kami memadukan teknik langsung dengan pelatihan gerak untuk mengembalikan fungsi dan mengurangi nyeri.</span></p><a class="cta" href="about.html"><span data-lang="en">Learn more</span><span data-lang="id">Pelajari lebih lanjut</span></a></div>
+      <div class="col"><h2>Redefining Body Care</h2><p class="lead">We blend hands-on techniques with movement coaching to restore function and reduce pain.</p><a class="cta" href="about.html">Learn more</a></div>
       <div class="col"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=900&auto=format&fit=crop" alt="Therapist working with athlete" class="image-round"></div>
     </div>
   </section>
 
   <section class="section testimonials section--dark fade-in">
     <div class="container">
-      <h2 class="section-title white"><span data-lang="en">What Our Clients Say</span><span data-lang="id">Kata Klien Kami</span></h2>
+      <h2 class="section-title white">What Our Clients Say</h2>
       <div class="grid-3">
-        <blockquote class="testimonial glass-card">"<span data-lang="en">Game changer for my recovery.</span><span data-lang="id">Mengubah permainan untuk pemulihan saya.</span>" <cite>- Alex</cite></blockquote>
-        <blockquote class="testimonial glass-card">"<span data-lang="en">I feel lighter and stronger.</span><span data-lang="id">Saya merasa lebih ringan dan kuat.</span>" <cite>- Sarah</cite></blockquote>
-        <blockquote class="testimonial glass-card">"<span data-lang="en">Professional & attentive.</span><span data-lang="id">Profesional & perhatian.</span>" <cite>- David</cite></blockquote>
+        <blockquote class="testimonial glass-card">"Game changer for my recovery." <cite>- Alex</cite></blockquote>
+        <blockquote class="testimonial glass-card">"I feel lighter and stronger." <cite>- Sarah</cite></blockquote>
+        <blockquote class="testimonial glass-card">"Professional & attentive." <cite>- David</cite></blockquote>
       </div>
     </div>
   </section>
 
   <section class="section cta-strip">
-    <div class="container center"><h3><span data-lang="en">Ready to move without limits?</span><span data-lang="id">Siap bergerak tanpa batas?</span></h3><a class="cta btn-primary large" href="contact.html"><span data-lang="en">Book via WhatsApp</span><span data-lang="id">Pesan via WhatsApp</span></a></div>
+    <div class="container center">
+      <h3>Ready to move without limits?</h3>
+      <a class="cta btn-primary large" href="https://wa.me/628111728128?text=Halo%20MoveWell%2C%20saya%20ingin%20memesan%20sesi%20...">Book via WhatsApp</a>
+    </div>
   </section>
 </main>
 
