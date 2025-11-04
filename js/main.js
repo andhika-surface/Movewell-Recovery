@@ -4,44 +4,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileToggle = document.getElementById("mobile-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
 
-  // Bahasa default (dari localStorage atau 'en')
+  // default language
   let currentLang = localStorage.getItem("lang") || "en";
 
-  // --- Fungsi: Set bahasa aktif ---
-  function setLanguage(lang) {
-    currentLang = lang;
-    localStorage.setItem("lang", lang);
-    updateLanguage();
-  }
-
-  // --- Fungsi: Update tampilan bahasa ---
-  function updateLanguage() {
-    const allLangElems = document.querySelectorAll("[data-lang]");
-
-    allLangElems.forEach(el => {
-      const langType = el.getAttribute("data-lang");
-      if (!langType) return; // lewati elemen tanpa data-lang
-
-      // tampilkan hanya bahasa aktif
-      if (langType === currentLang) {
-        el.style.display = "";
-      } else {
-        el.style.display = "none";
-      }
+  function applyLanguage(lang) {
+    const all = document.querySelectorAll("[data-lang]");
+    all.forEach(el => {
+      el.classList.toggle("show-lang", el.dataset.lang === lang);
     });
 
-    // toggle tombol aktif
     langBtns.forEach(btn => {
-      btn.classList.toggle("active", btn.dataset.lang === currentLang);
+      btn.classList.toggle("active", btn.dataset.lang === lang);
     });
+
+    localStorage.setItem("lang", lang);
+    currentLang = lang;
   }
 
-  // --- Event listener tombol bahasa ---
   langBtns.forEach(btn => {
-    btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+    btn.addEventListener("click", () => applyLanguage(btn.dataset.lang));
   });
 
-  // --- Mobile menu toggle ---
+  // mobile menu
   if (mobileToggle && mobileMenu) {
     mobileToggle.addEventListener("click", () => {
       const expanded = mobileToggle.getAttribute("aria-expanded") === "true";
@@ -50,14 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Tahun otomatis ---
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
+  // footer year
+  if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-  // Pastikan body tampil setelah script selesai
-  document.body.style.visibility = "visible";
-
-  // Jalankan bahasa awal
-  updateLanguage();
+  // run on load
+  applyLanguage(currentLang);
 });
