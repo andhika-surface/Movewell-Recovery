@@ -1,26 +1,30 @@
-/* main.js - fixed bilingual toggle + full interactions */
+/* main.js - bilingual toggle + full page interactions (final fix) */
 const $ = (s, ctx=document) => ctx.querySelector(s);
 const $$ = (s, ctx=document) => Array.from((ctx || document).querySelectorAll(s));
 
 function setLanguage(lang){
   $$('[data-lang]').forEach(el=>{
-    el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+    el.classList.remove('active-lang');
+    if (el.getAttribute('data-lang') === lang) {
+      el.classList.add('active-lang');
+    }
   });
+
   $$('.lang-btn').forEach(btn=>{
     const b = btn.getAttribute('data-lang') || btn.dataset.lang;
-    btn.classList.toggle('active', b===lang);
-    btn.setAttribute('aria-pressed', b===lang ? 'true' : 'false');
+    btn.classList.toggle('active', b === lang);
+    btn.setAttribute('aria-pressed', b === lang ? 'true' : 'false');
   });
+
   try { localStorage.setItem('movewell_lang', lang); } catch(e){}
 }
 
-// Run after DOM and assets are fully ready
 function initMoveWell(){
   const saved = localStorage.getItem('movewell_lang') || 'en';
   setLanguage(saved);
 
-  // Language toggle buttons
-  $$('.lang-btn').forEach(btn => {
+  // Language toggle
+  $$('.lang-btn').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       const lang = btn.getAttribute('data-lang') || btn.dataset.lang;
       setLanguage(lang);
@@ -38,7 +42,7 @@ function initMoveWell(){
     });
   }
 
-  // Close mobile menu on link click
+  // Close menu on click
   $$('#mobile-menu a').forEach(a =>
     a.addEventListener('click', ()=>{
       if($('#mobile-menu')){
@@ -48,7 +52,7 @@ function initMoveWell(){
     })
   );
 
-  // Active nav highlight
+  // Active nav link
   const path = location.pathname.split('/').pop() || 'index.html';
   const map = { 'index.html':'home','services.html':'services','about.html':'about','promo.html':'promo','contact.html':'contact' };
   const key = map[path] || 'home';
@@ -56,7 +60,7 @@ function initMoveWell(){
     if(a.dataset && a.dataset.nav === key) a.classList.add('active');
   });
 
-  // Fade-in observer
+  // Fade-in
   const fadeEls = $$('.fade-in');
   const obs = new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
@@ -88,12 +92,12 @@ function initMoveWell(){
   });
   window.addEventListener('resize', heroParallax);
 
-  // Update year
+  // Year auto
   const y = $('#year');
   if(y) y.textContent = new Date().getFullYear();
 }
 
-// Wait until everything is ready (important for GitHub Pages)
+// Delay init a bit for GitHub Pages
 window.addEventListener('load', () => {
   setTimeout(initMoveWell, 150);
 });
