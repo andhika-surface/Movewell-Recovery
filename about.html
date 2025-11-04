@@ -1,154 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="manifest" href="manifest.json">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Learn about MoveWell Jakarta — a modern recovery and bodywork studio blending manual therapy and guided movement for optimal performance." />
-  <meta name="keywords" content="movewell jakarta, about movewell, physiotherapy jakarta, recovery studio, bodywork jakarta" />
-  <meta name="author" content="MoveWell Indonesia" />
-  <link rel="canonical" href="https://movewellindonesia.com/about.html" />
-  <title>MoveWell Jakarta — About</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About MoveWell Recovery — modern recovery and bodywork studio blending manual therapy and guided movement." />
+  <title>MoveWell Recovery — About</title>
 
-  <!-- ✅ Google Search Console verification -->
-  <meta name="google-site-verification" content="fXZo_TOqinCZobDaaWBRXpc_Kb8xA_AxMJIRdl97XOI" />
-
-  <!-- ✅ Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HFPR42J48S"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-HFPR42J48S');
-  </script>
-
-  <!-- ✅ Open Graph / Social meta -->
-  <meta property="og:title" content="About MoveWell Jakarta — Modern Bodywork & Recovery Studio" />
-  <meta property="og:description" content="MoveWell blends hands-on techniques with guided movement to restore function, reduce pain, and improve performance." />
-  <meta property="og:image" content="https://movewellindonesia.com/og-cover.jpg" />
-  <meta property="og:url" content="https://movewellindonesia.com/about.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="MoveWell Indonesia" />
-
-  <!-- ✅ Twitter meta -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About MoveWell Jakarta — Modern Bodywork & Recovery Studio" />
-  <meta name="twitter:description" content="Discover MoveWell Jakarta — where manual therapy meets movement coaching for true recovery." />
-  <meta name="twitter:image" content="https://movewellindonesia.com/og-cover.jpg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Jost:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="https://movewellindonesia.com/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Jost:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
 </head>
 
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">
-      <span class="brand--move">MOVE</span><span class="brand--well">WELL</span>
-    </a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Move<span class="brand--well">Well</span></a>
 
-    <nav class="nav" id="main-nav" aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="index.html" class="nav-link" data-nav="home"><span data-lang="en">Home</span><span data-lang="id">Beranda</span></a></li>
-        <li><a href="services.html" class="nav-link" data-nav="services"><span data-lang="en">Services</span><span data-lang="id">Layanan</span></a></li>
-        <li><a href="about.html" class="nav-link" data-nav="about"><span data-lang="en">About</span><span data-lang="id">Tentang</span></a></li>
-        <li><a href="promo.html" class="nav-link" data-nav="promo"><span data-lang="en">Promo</span><span data-lang="id">Promo</span></a></li>
-        <li><a href="contact.html" class="nav-link" data-nav="contact"><span data-lang="en">Contact</span><span data-lang="id">Kontak</span></a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-nav="home" data-lang="en">Home</a></li>
+          <li><a href="index.html" class="nav-link" data-nav="home" data-lang="id">Beranda</a></li>
 
-    <div class="header-actions">
-      <div class="lang-switcher" role="tablist" aria-label="Language switcher">
-        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
-        <button class="lang-btn" data-lang="id" aria-pressed="false">ID</button>
+          <li><a href="services.html" class="nav-link" data-nav="services" data-lang="en">Services</a></li>
+          <li><a href="services.html" class="nav-link" data-nav="services" data-lang="id">Layanan</a></li>
+
+          <li><a href="about.html" class="nav-link" data-nav="about" data-lang="en">About</a></li>
+          <li><a href="about.html" class="nav-link" data-nav="about" data-lang="id">Tentang</a></li>
+
+          <li><a href="promo.html" class="nav-link" data-nav="promo" data-lang="en">Promo</a></li>
+          <li><a href="promo.html" class="nav-link" data-nav="promo" data-lang="id">Promo</a></li>
+
+          <li><a href="contact.html" class="nav-link" data-nav="contact" data-lang="en">Contact</a></li>
+          <li><a href="contact.html" class="nav-link" data-nav="contact" data-lang="id">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="cta-desktop">
+        <a href="contact.html" class="cta btn-primary large" data-lang="en">Book Now</a>
+        <a href="contact.html" class="cta btn-primary large" data-lang="id">Pesan Sekarang</a>
       </div>
 
-      <a class="cta cta-desktop" href="contact.html"><span data-lang="en">Book</span><span data-lang="id">Pesan</span></a>
-
-      <button id="mobile-toggle" class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-        <span class="burger"></span>
-      </button>
-    </div>
-  </div>
-
-  <div id="mobile-menu" class="mobile-menu" hidden>
-    <ul class="mobile-list">
-      <li><a href="index.html"><span data-lang="en">Home</span><span data-lang="id">Beranda</span></a></li>
-      <li><a href="services.html"><span data-lang="en">Services</span><span data-lang="id">Layanan</span></a></li>
-      <li><a href="about.html"><span data-lang="en">About</span><span data-lang="id">Tentang</span></a></li>
-      <li><a href="promo.html"><span data-lang="en">Promo</span><span data-lang="id">Promo</span></a></li>
-      <li><a href="contact.html"><span data-lang="en">Contact</span><span data-lang="id">Kontak</span></a></li>
-    </ul>
-    <div class="mobile-cta">
-      <a class="cta" href="contact.html"><span data-lang="en">Book Now</span><span data-lang="id">Pesan Sekarang</span></a>
-      <div class="mobile-lang">
-        <button class="lang-btn active" data-lang="en">EN</button>
+      <div class="lang-switch">
+        <button class="lang-btn" data-lang="en">EN</button>
         <button class="lang-btn" data-lang="id">ID</button>
       </div>
-    </div>
-  </div>
-</header>
 
-<main>
+      <button id="mobile-toggle" class="btn-ghost mobile-toggle" aria-expanded="false" aria-label="Toggle Menu">☰</button>
+    </div>
+  </header>
+
+  <nav id="mobile-menu" hidden>
+    <ul class="nav-list center">
+      <li><a href="index.html" data-nav="home" data-lang="en">Home</a></li>
+      <li><a href="index.html" data-nav="home" data-lang="id">Beranda</a></li>
+
+      <li><a href="services.html" data-nav="services" data-lang="en">Services</a></li>
+      <li><a href="services.html" data-nav="services" data-lang="id">Layanan</a></li>
+
+      <li><a href="about.html" data-nav="about" data-lang="en">About</a></li>
+      <li><a href="about.html" data-nav="about" data-lang="id">Tentang</a></li>
+
+      <li><a href="promo.html" data-nav="promo" data-lang="en">Promo</a></li>
+      <li><a href="promo.html" data-nav="promo" data-lang="id">Promo</a></li>
+
+      <li><a href="contact.html" data-nav="contact" data-lang="en">Contact</a></li>
+      <li><a href="contact.html" data-nav="contact" data-lang="id">Kontak</a></li>
+    </ul>
+    <div class="mobile-lang">
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="id">ID</button>
+    </div>
+  </nav>
+
   <section class="section fade-in">
-    <div class="container grid-2">
-      <div class="col">
-        <h2><span data-lang="en">About MoveWell</span><span data-lang="id">Tentang MoveWell</span></h2>
-        <p class="lead">
-          <span data-lang="en">MoveWell is a modern bodywork and recovery studio in Jakarta, built for those who want more from their bodies.</span>
-          <span data-lang="id">MoveWell adalah studio bodywork dan pemulihan modern di Jakarta, dibuat untuk mereka yang menginginkan performa tubuh maksimal.</span>
+    <div class="container grid-3">
+      <div>
+        <h2 data-lang="en">About MoveWell</h2>
+        <h2 data-lang="id">Tentang MoveWell</h2>
+        <p class="muted" data-lang="en">
+          MoveWell is a modern body recovery studio built for people who want more from their bodies — better movement, less pain, and real results.
         </p>
-        <p>
-          <span data-lang="en">Our approach blends targeted manual therapy with guided movement coaching to restore function, improve mobility, and reduce pain sustainably.</span>
-          <span data-lang="id">Pendekatan kami memadukan terapi manual terarah dengan pelatihan gerak terpandu untuk memulihkan fungsi, meningkatkan mobilitas, dan mengurangi nyeri secara berkelanjutan.</span>
+        <p class="muted" data-lang="id">
+          MoveWell adalah studio pemulihan tubuh modern yang dibuat untuk mereka yang ingin bergerak lebih baik, tanpa rasa nyeri, dengan hasil nyata.
         </p>
       </div>
-      <div class="col">
-        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=900&auto=format&fit=crop" alt="Therapy session at MoveWell Jakarta" class="image-round">
+      <div>
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=900&auto=format&fit=crop" alt="MoveWell therapist session" class="image-round" />
+      </div>
+      <div>
+        <p class="muted" data-lang="en">
+          Our method blends manual therapy, stretching, and movement education to restore your natural range and performance.
+        </p>
+        <p class="muted" data-lang="id">
+          Metode kami memadukan terapi manual, stretching, dan edukasi gerak untuk mengembalikan mobilitas alami dan performa tubuhmu.
+        </p>
       </div>
     </div>
   </section>
 
   <section class="section fade-in">
-    <div class="container">
-      <h3 class="center"><span data-lang="en">Our Team</span><span data-lang="id">Tim Kami</span></h3>
-      <div class="grid-3 team-grid">
-        <div class="team-member card">
-          <div class="avatar">N</div>
+    <div class="container center">
+      <h3 class="section-title" data-lang="en">Meet Our Team</h3>
+      <h3 class="section-title" data-lang="id">Kenali Tim Kami</h3>
+      <div class="grid-3 mt-24">
+        <div class="card elevated">
           <h4>Ninu</h4>
-          <p class="muted"><span data-lang="en">Lead Therapist</span><span data-lang="id">Terapis Utama</span></p>
+          <p class="muted" data-lang="en">Lead Therapist</p>
+          <p class="muted" data-lang="id">Terapis Utama</p>
         </div>
-        <div class="team-member card">
-          <div class="avatar">R</div>
+        <div class="card elevated">
           <h4>Ruli</h4>
-          <p class="muted"><span data-lang="en">Physiotherapist</span><span data-lang="id">Fisioterapis</span></p>
+          <p class="muted" data-lang="en">Physiotherapist</p>
+          <p class="muted" data-lang="id">Fisioterapis</p>
         </div>
-        <div class="team-member card">
-          <div class="avatar">A</div>
+        <div class="card elevated">
           <h4>Aji</h4>
-          <p class="muted"><span data-lang="en">Bodywork Specialist</span><span data-lang="id">Spesialis Bodywork</span></p>
+          <p class="muted" data-lang="en">Bodywork Specialist</p>
+          <p class="muted" data-lang="id">Spesialis Bodywork</p>
         </div>
       </div>
     </div>
   </section>
-</main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <strong>MoveWell Jakarta</strong><br>
-      <a href="mailto:hello@movewellindonesia.com">hello@movewellindonesia.com</a> • <a href="https://wa.me/628111728128">WA</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> MoveWell Recovery</p>
+      <p class="muted" data-lang="en">Move better. Live stronger.</p>
+      <p class="muted" data-lang="id">Bergerak lebih baik. Hidup lebih kuat.</p>
     </div>
-    <div class="footer-links">
-      <a href="privacy.html">Privacy</a> 
-      <a href="terms.html">Terms</a>
-    </div>
-  </div>
-</footer>
-
-<script src="js/main.js" defer></script>
+  </footer>
 </body>
 </html>
