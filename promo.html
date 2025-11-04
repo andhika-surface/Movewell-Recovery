@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Opening Promo — enjoy up to 20% off MoveWell Recovery sessions this month. Limited daily slots!" />
-  <title>MoveWell Recovery — Opening Promo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Jost:wght@600;700&display=swap" rel="stylesheet" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MoveWell — Promo</title>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/main.js" defer></script>
 </head>
@@ -15,72 +13,59 @@
       <a href="index.html" class="brand">Move<span class="brand--well">Well</span></a>
       <nav>
         <ul class="nav-list">
-          <li><a href="index.html" class="nav-link" data-nav="home" data-lang="en">Home</a></li>
-          <li><a href="index.html" class="nav-link" data-nav="home" data-lang="id">Beranda</a></li>
-          <li><a href="services.html" class="nav-link" data-nav="services" data-lang="en">Services</a></li>
-          <li><a href="services.html" class="nav-link" data-nav="services" data-lang="id">Layanan</a></li>
-          <li><a href="about.html" class="nav-link" data-nav="about" data-lang="en">About</a></li>
-          <li><a href="about.html" class="nav-link" data-nav="about" data-lang="id">Tentang</a></li>
-          <li><a href="promo.html" class="nav-link" data-nav="promo" data-lang="en">Promo</a></li>
-          <li><a href="promo.html" class="nav-link" data-nav="promo" data-lang="id">Promo</a></li>
-          <li><a href="contact.html" class="nav-link" data-nav="contact" data-lang="en">Contact</a></li>
-          <li><a href="contact.html" class="nav-link" data-nav="contact" data-lang="id">Kontak</a></li>
+          <li><a href="index.html" class="nav-link" data-nav="home"><span data-lang="en">Home</span><span data-lang="id">Beranda</span></a></li>
+          <li><a href="services.html" class="nav-link" data-nav="services"><span data-lang="en">Services</span><span data-lang="id">Layanan</span></a></li>
+          <li><a href="about.html" class="nav-link" data-nav="about"><span data-lang="en">About</span><span data-lang="id">Tentang</span></a></li>
+          <li><a href="promo.html" class="nav-link" data-nav="promo"><span data-lang="en">Promo</span><span data-lang="id">Promo</span></a></li>
+          <li><a href="contact.html" class="nav-link" data-nav="contact"><span data-lang="en">Contact</span><span data-lang="id">Kontak</span></a></li>
         </ul>
       </nav>
+
       <div class="cta-desktop">
-        <a href="contact.html" class="cta btn-primary large" data-lang="en">Book Now</a>
-        <a href="contact.html" class="cta btn-primary large" data-lang="id">Pesan Sekarang</a>
+        <a href="contact.html" class="cta btn-primary"><span data-lang="en">Book Now</span><span data-lang="id">Pesan Sekarang</span></a>
       </div>
+
       <div class="lang-switch">
         <button class="lang-btn" data-lang="en">EN</button>
         <button class="lang-btn" data-lang="id">ID</button>
       </div>
-      <button id="mobile-toggle" class="btn-ghost mobile-toggle" aria-expanded="false" aria-label="Toggle Menu">☰</button>
+
+      <button id="mobile-toggle" class="btn-ghost mobile-toggle" aria-expanded="false">☰</button>
     </div>
   </header>
 
   <nav id="mobile-menu" hidden></nav>
 
-  <section class="section fade-in">
-    <div class="container center">
-      <h2 class="section-title" data-lang="en">Opening Promo</h2>
-      <h2 class="section-title" data-lang="id">Promo Pembukaan</h2>
-      <p class="muted" data-lang="en">Founding Month Special — limited daily slots.</p>
-      <p class="muted" data-lang="id">Spesial bulan pembukaan — slot harian terbatas.</p>
-    </div>
+  <main class="section section--light">
+    <div class="container">
+      <h1 class="section-title"><span data-lang="en">Opening Promo</span><span data-lang="id">Promo Pembukaan</span></h1>
+      <p class="mt-24">
+        <span data-lang="en">Enjoy up to 20% off selected sessions for the first month. Limited slots each day — book early!</span>
+        <span data-lang="id">Nikmati diskon hingga 20% untuk sesi terpilih selama bulan pertama. Slot terbatas setiap hari — pesan lebih awal!</span>
+      </p>
 
-    <div class="container grid-3 mt-24">
-      <div class="card elevated fade-in">
-        <h3 data-lang="en">Opening Rates</h3>
-        <h3 data-lang="id">Harga Promo</h3>
-        <p><strong>15 min:</strong> IDR 80K <span class="muted line-through">90K</span></p>
-        <p><strong>30 min:</strong> IDR 150K <span class="muted line-through">175K</span></p>
-        <p><strong>60 min:</strong> IDR 280K <span class="muted line-through">325K</span></p>
-      </div>
-      <div class="card elevated fade-in">
-        <h3 data-lang="en">Voucher Packs</h3>
-        <h3 data-lang="id">Paket Voucher</h3>
-        <p class="muted" data-lang="en">10 sessions — IDR 1.4M</p>
-        <p class="muted" data-lang="id">10 sesi — IDR 1.4M</p>
-        <a href="https://wa.me/628111728128" class="cta btn-primary mt-12" target="_blank" rel="noopener">
-          <span data-lang="en">Book via WhatsApp</span>
-          <span data-lang="id">Pesan via WhatsApp</span>
-        </a>
-      </div>
-      <div class="card elevated fade-in">
-        <h3 data-lang="en">Extra Perks</h3>
-        <h3 data-lang="id">Bonus Tambahan</h3>
-        <p class="muted" data-lang="en">Free guided stretching consultation during November.</p>
-        <p class="muted" data-lang="id">Gratis konsultasi stretching terpandu selama bulan November.</p>
+      <div class="grid-3 mt-24">
+        <div class="card">
+          <h3><span data-lang="en">Starter Pack</span><span data-lang="id">Paket Pemula</span></h3>
+          <p><span data-lang="en">3 x 30min sessions — great for quick resets.</span><span data-lang="id">3 x 30 menit — cocok untuk reset cepat.</span></p>
+        </div>
+
+        <div class="card">
+          <h3><span data-lang="en">Performance Pack</span><span data-lang="id">Paket Performa</span></h3>
+          <p><span data-lang="en">5 x 60min sessions — deeper work & mobility.</span><span data-lang="id">5 x 60 menit — kerja mendalam & mobilitas.</span></p>
+        </div>
+
+        <div class="card">
+          <h3><span data-lang="en">Care Pack</span><span data-lang="id">Paket Perawatan</span></h3>
+          <p><span data-lang="en">10-session bundle for long-term maintenance.</span><span data-lang="id">Bundel 10 sesi untuk pemeliharaan jangka panjang.</span></p>
+        </div>
       </div>
     </div>
-  </section>
+  </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> MoveWell Recovery</p>
-      <p class="muted" data-lang="en">Move better. Live stronger.</p>
-      <p class="muted" data-lang="id">Bergerak lebih baik. Hidup lebih kuat.</p>
+    <div class="container">
+      <p>&copy; <span id="year"></span> MoveWell. <span data-lang="en">All rights reserved.</span><span data-lang="id">Hak cipta dilindungi.</span></p>
     </div>
   </footer>
 </body>
