@@ -5,8 +5,14 @@ const $$ = (s, ctx = document) => Array.from(ctx.querySelectorAll(s));
 /* === Language Switcher === */
 function setLanguage(lang) {
   $$('[data-lang]').forEach(el => {
-    el.classList.toggle('active-lang', el.getAttribute('data-lang') === lang);
+    const isActive = el.getAttribute('data-lang') === lang;
+    el.classList.toggle('active-lang', isActive);
+    // ensure screen readers ignore inactive language
+    el.setAttribute('aria-hidden', String(!isActive));
   });
+
+  // update the document language attribute for accessibility
+  document.documentElement.lang = lang;
 
   $$('.lang-btn').forEach(btn => {
     const btnLang = btn.dataset.lang;
@@ -45,13 +51,49 @@ function initMobileMenu() {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
     menu.hidden = expanded;
+    // populate mobile menu if empty (simple clone of desktop nav)
+    const desktopNav = document.querySelector('.nav-list');
+    if (menu.innerHTML.trim() === '' && desktopNav) {
+      const clone = desktopNav.cloneNode(true);
+      // remove duplicate data-lang nodes inside links to keep mobile simple:
+      const links = clone.querySelectorAll('a.nav-link');
+      links.forEach(a => {
+        const textEn = a.querySelector('[data-lang="en"]');
+        const textId = a.querySelector('[data-lang="id"]');
+        // create a compact label with both languages wrapped (they'll be shown/hidden by setLanguage)
+        if (textEn || textId) {
+          a.innerHTML = '';
+          const spanEn = document.createElement('span');
+          spanEn.setAttribute('data-lang','en');
+          spanEn.textContent = textEn ? textEn.textContent : (textId ? textId.textContent : a.textContent);
+          const spanId = document.createElement('span');
+          spanId.setAttribute('data-lang','id');
+          spanId.textContent = textId ? textId.textContent : (textEn ? textEn.textContent : a.textContent);
+          a.appendChild(spanEn);
+          a.appendChild(spanId);
+        }
+      });
+      const ul = document.createElement('ul');
+      ul.appendChild(clone);
+      // if clone is already a UL, adjust:
+      if (clone.tagName.toLowerCase() === 'ul') {
+        menu.appendChild(clone);
+      } else {
+        menu.appendChild(clone);
+      }
+      // ensure language visibility is correct inside mobile menu
+      const saved = localStorage.getItem('movewell_lang') || 'en';
+      setLanguage(saved);
+    }
   });
 
   // Close menu after clicking a link
   $$('#mobile-menu a').forEach(link => {
     link.addEventListener('click', () => {
-      menu.hidden = true;
-      toggle.setAttribute('aria-expanded', 'false');
+      const menuEl = $('#mobile-menu');
+      const toggleEl = $('#mobile-toggle');
+      if (menuEl) menuEl.hidden = true;
+      if (toggleEl) toggleEl.setAttribute('aria-expanded', 'false');
     });
   });
 }
